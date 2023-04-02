@@ -1,0 +1,104 @@
+<h3 style="text-align: center;">Add/Edit Contact</h3>
+<hr>
+<div class="container mt-10">
+    <form [formGroup]="contactForm">
+        <div class="container row form-group">
+            <label class="col-sm-2"><b>First Name:</b> </label>
+            <div class="col-sm-4">
+                <input class="full-width" type="text" placeholder="Please enter your first name"
+                    formControlName="FirstName"><br>
+                <span class="text-danger"
+                    *ngIf="contactForm.get('FirstName').touched && contactForm.get('FirstName').errors">
+                    First Name is required
+                </span>
+            </div>
+            <label class="col-sm-2"><b>Last Name: </b></label>
+            <div class="col-sm-4">
+                <input class="full-width" type="text" placeholder="Please enter your last name"
+                    formControlName="LastName"><br>
+                <span class="text-danger"
+                    *ngIf="contactForm.get('LastName').touched && contactForm.get('LastName').errors">
+                    Last Name is required
+                </span>
+            </div>
+        </div>
+        <div class="container row form-group">
+            <label class="col-sm-2"><b>Email:</b> </label>
+            <div class="col-sm-4">
+                <input class="full-width" type="email" placeholder="Please enter your email"
+                    formControlName="Email"><br>
+                <span class="text-danger" *ngIf="contactForm.get('Email').touched && contactForm.get('Email').errors">
+                    Email is required
+                </span>
+            </div>
+            <label class="col-sm-2"><b>Phone number: </b></label>
+            <div class="col-sm-4">
+                <input class="full-width" type="number" placeholder="Please enter your phone number"
+                    formControlName="PhoneNumber"><br>
+                <span class="text-danger"
+                    *ngIf="contactForm.get('PhoneNumber').touched && contactForm.get('PhoneNumber').errors">
+                    Phone Number is required
+                </span>
+            </div>
+        </div>
+        <div class="container row form-group">
+            <label class="col-sm-2"><b>Address: </b></label>
+            <div class="col-sm-4">
+                <input class="full-width" type="text" placeholder="Please enter your address"
+                    formControlName="Address"><br>
+                <span class="text-danger"
+                    *ngIf="contactForm.get('Address').touched && contactForm.get('Address').errors">
+                    Address is required
+                </span>
+            </div>
+            <label class="col-sm-2"><b>City: </b></label>
+            <div class="col-sm-4">
+                <input class="full-width" type="text" placeholder="Please enter your city name"
+                    formControlName="City"><br>
+                <span class="text-danger" *ngIf="contactForm.get('City').touched && contactForm.get('City').errors">
+                    City Name is required
+                </span>
+            </div>
+        </div>
+        <div class="container row form-group">
+            <label class="col-sm-2"><b>State: </b></label>
+            <div class="col-sm-4">
+                <input class="full-width" type="text" placeholder="Please enter your state name"
+                    formControlName="State"><br>
+                <span class="text-danger" *ngIf="contactForm.get('State').touched && contactForm.get('State').errors">
+                    State Name is required
+                </span>
+            </div>
+            <label class="col-sm-2"><b>Country: </b></label>
+            <div class="col-sm-4">
+                <input class="full-width" type="text" placeholder="Please enter your country name"
+                    formControlName="Country"><br>
+                <span class="text-danger"
+                    *ngIf="contactForm.get('Country').touched && contactForm.get('Country').errors">
+                    Country Name is required
+                </span>
+            </div>
+        </div>
+        <div class="container row form-group">
+            <label class="col-sm-2"><b>Postal code: </b></label>
+            <div class="col-sm-4">
+                <input class="full-width" type="number" placeholder="Please enter your postal code"
+                    formControlName="PostalCode"><br>
+                <span class="text-danger"
+                    *ngIf="contactForm.get('PostalCode').touched && contactForm.get('PostalCode').errors">
+                    Postal Code is required
+                </span>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-5"></div>
+    <div class="col-2">
+
+        <button type="button" class="btn btn-primary" style="margin-right: 20px;" [disabled]="!contactForm.valid"
+            (click)="addContact()">Submit</button>
+        <button type="button" class="btn btn-default" [routerLink]="'/contacts'">Cancel</button>
+    </div>
+    <div class="col-5"></div>
+</div>

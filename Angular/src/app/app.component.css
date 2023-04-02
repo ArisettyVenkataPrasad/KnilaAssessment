@@ -1,0 +1,13 @@
+.bg-light
+{
+    background-color: #ced4da !important;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ced4da;
+    text-align: center;
+ }

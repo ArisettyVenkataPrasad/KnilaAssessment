@@ -1,0 +1,38 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .add-contact-button
+  {
+    color: white;
+    text-decoration: none;
+  }
+
+  .mt-10
+  {
+    margin-top: 10px;
+  }
+
+  .edit-contact:hover
+  {
+    text-decoration: underline !important;
+    color: blue !important;
+    cursor: pointer !important;
+  }
+
+  .edit-contact
+  {
+    text-decoration: underline !important;
+    color: gray !important;
+  }
